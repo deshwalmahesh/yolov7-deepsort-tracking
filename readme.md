@@ -4,7 +4,9 @@ This repo uses official implementations (with modifications) of [YOLOv7: Trainab
 I have refactored the code, removed dependencies, removed extra code so that you can use **ANY** detector model with `DeepSORT`. Please look at the `Demo.ipynb` notebook on how to use the code.
 
 # Steps:
-Please Follow the below steps
+To use in `Colab`: Open `Colab Demo.ipynb`
+
+For use in local system, please follow the below steps
 
 1. Clone the repo as `git clone https://github.com/deshwalmahesh/yolov7-deepsort-tracking/`
 2. Download the weights of any of the pre trained `YOLOv7` models from the links: [`yolov7.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) [`yolov7x.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt) [`yolov7-w6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-w6.pt) [`yolov7-e6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6.pt) [`yolov7-d6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-d6.pt) [`yolov7-e6e.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6e.pt)

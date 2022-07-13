@@ -14,10 +14,11 @@ For use in local system, please follow the below steps
 4. Go to `Demo.ipynb` and run the code. 
 
 # Troubleshooting
-This code works perfectly with `python== 3.7, tensorflow==2.8.0, torch== 1.8.0, sklearn==0.24.2` with CPU but you might run in trouble.
-1. Solution to [No module named 'sklearn.utils.linear_assignment_'](https://stackoverflow.com/questions/62390517/no-module-named-sklearn-utils-linear-assignment). I have modified the code for `deep_sort` where `Kalman Filter` shifted to `scipy` instead of `sklearn`
-2. I haven't tested this code with `GPU` but it might be the case that `deep_sort`, which uses `tensorflow-1.x`, might cause you some problems so you can test with changing the version.
-3. One of the most frequent problem is with the `PATH` such as model weights, input, output etc so pass in the path of the weights carefully. Do not just `run all` all the cells given in the notebook. this code works perfectly as long as you pass the correct path.
+This code works **perfectly** with `python== 3.7, tensorflow==2.8.0, torch== 1.8.0, sklearn==0.24.2` on local **Ubuntu: CPU** as well as **Colab: CPU + GPU** as of `13/07/2022`.
+
+One of the most frequent problem is with the `PATH` such as model weights, input, output etc so pass in the path of the weights carefully. Do not just `run all` all the cells given in the notebook. this code works perfectly as long as you pass the correct path.
+
+If you find yourself in trouble, please raise an issue.
 
 
 # References

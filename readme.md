@@ -1,9 +1,8 @@
 # Welcome!
 This repo uses official implementations (with modifications) of [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://github.com/WongKinYiu/yolov7) and [Simple Online and Realtime Tracking with a Deep Association Metric (Deep SORT)](https://github.com/nwojke/deep_sort)  to detect objects from images, videos and then track objects in Videos (tracking in images does not make sense)
 
-<video width="320" height="240" controls>
-  <source src="/IO_data/output/video.mp4" type="video/mp4">
-</video>
+![yolov7_gif](https://user-images.githubusercontent.com/50293852/179401908-bb40a5aa-1209-4efd-924a-641300bb456a.gif)
+
 
 
 I have refactored the code, removed dependencies, removed extra code so that you can use **ANY** detector model with `DeepSORT`. Please look at the `Demo.ipynb` notebook on how to use the code.

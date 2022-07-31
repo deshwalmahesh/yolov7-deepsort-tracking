@@ -97,14 +97,21 @@ class YOLOv7_DeepSORT:
             # -----------------------------------------PUT ANY DETECTION MODEL HERE -----------------------------------------------------------------
             yolo_dets = self.detector.detect(frame.copy(), plot_bb = False)  # Get the detections
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            
-            bboxes = yolo_dets[:,:4]
-            bboxes[:,2] = bboxes[:,2] - bboxes[:,0] # convert from xyxy to xywh
-            bboxes[:,3] = bboxes[:,3] - bboxes[:,1]
 
-            scores = yolo_dets[:,4]
-            classes = yolo_dets[:,-1]
-            num_objects = bboxes.shape[0]
+            if yolo_dets is None:
+                bboxes = []
+                scores = []
+                classes = []
+                num_objects = 0
+            
+            else:
+                bboxes = yolo_dets[:,:4]
+                bboxes[:,2] = bboxes[:,2] - bboxes[:,0] # convert from xyxy to xywh
+                bboxes[:,3] = bboxes[:,3] - bboxes[:,1]
+
+                scores = yolo_dets[:,4]
+                classes = yolo_dets[:,-1]
+                num_objects = bboxes.shape[0]
             # ---------------------------------------- DETECTION PART COMPLETED ---------------------------------------------------------------------
             
             names = []

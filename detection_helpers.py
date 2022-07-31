@@ -103,7 +103,7 @@ class Detector:
         
             return im0 if plot_bb else det.detach().cpu().numpy()
 
-        return im0
+        return im0 if plot_bb else None # just in case there's no detection, return the original image. For tracking purpose plot_bb has to be False always
         
 
     
